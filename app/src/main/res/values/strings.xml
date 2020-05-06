@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Quizz App</string>
+    <string name="question1">Question 1 (Check One Answer)\n 1 + 1 = </string>
+    <string name="_11">11</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
 </resources>
