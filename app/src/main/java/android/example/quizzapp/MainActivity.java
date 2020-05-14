@@ -25,12 +25,14 @@ public class MainActivity extends AppCompatActivity {
         boolean correctAnswerQuestionOne = answerTwoQuestionOne.isChecked();
         questionOneAnswer(correctAnswerQuestionOne);
 
+
+
     }
 
     /**
      * This method makes a toast for question one and global variable @correctScore keeps correct score.
      */
-    public int questionOneAnswer(boolean correctAnswer){
+    public void questionOneAnswer(boolean correctAnswer){
         CheckBox answerOneQuestionOne = findViewById(R.id.q1A1);
         boolean questionOneWrongAnswerOne = answerOneQuestionOne.isChecked();
         CheckBox answerThreeQuestionOne = findViewById(R.id.q1A3);
@@ -41,14 +43,19 @@ public class MainActivity extends AppCompatActivity {
         if (correctAnswer == true){
         Toast.makeText(this, "Correct Answer", Toast.LENGTH_SHORT).show();
         correctScore +=1;
+        displayScore(correctScore);
         }
 
         if (questionOneWrongAnswerOne || questionOneWrongAnswerThree || questionOneWrongAnswerFour == true){
             Toast.makeText(this, "Wrong Answer", Toast.LENGTH_SHORT).show();
         }
 
-        return correctScore;
     }
 
+
+    private void displayScore(int Score){
+        TextView scoreTotal = findViewById(R.id.score);
+        scoreTotal.setText(Score);
+    }
 }
 
