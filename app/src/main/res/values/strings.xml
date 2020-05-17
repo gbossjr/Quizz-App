@@ -1,8 +1,19 @@
 <resources>
     <string name="app_name">Quizz App</string>
-    <string name="question1">Question 1 (Check One Answer)\n 1 + 1 = </string>
-    <string name="_11">11</string>
-    <string name="_2">2</string>
-    <string name="_1">1</string>
-    <string name="_3">3</string>
+    <string name="question1"><b>Question 1</b> \nBelow are groups of four numbers. Select the one that does not belong with the others. </string>
+    <string name="question2"><b>Question 2</b> \nBelow are groups of four numbers. Select the one that does not belong with the others. </string>
+    <string name="question3"><b>Question 3</b> \nBelow are groups of four numbers. Select three that belong together.</string>
+    <string name="question4"><b>Question 4</b> \nDo you feel you did well on the quiz? (Yes/No)</string>
+    <string name="q1A">10 - 4</string>
+    <string name="q1B">4 + 2</string>
+    <string name="q1C">3 + 5</string>
+    <string name="q1D">8 - 2</string>
+    <string name="q2A">8 + 4</string>
+    <string name="q2B">15 - 3</string>
+    <string name="q2C">3 * 4</string>
+    <string name="q2D">9 + 4</string>
+    <string name="q3A">12 - 4</string>
+    <string name="q3B">11 - 4</string>
+    <string name="q3C">13 - 6</string>
+    <string name="q3D">14 - 7</string>
 </resources>
