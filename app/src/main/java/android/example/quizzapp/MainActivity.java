@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             correctScore +=1;
         }
 
-        Toast.makeText(this, "Total Score is " + correctScore + " out of ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Total Score is " + correctScore + " out of 4", Toast.LENGTH_SHORT).show();
         correctScore = 0;
     }
 }
