@@ -17,20 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    /**
-     * This method makes a toast for question one and global variable @correctScore keeps correct score.
-     *
-     */
-
+    /* This method makes a toast for question one and global variable @correctScore keeps correct score.*/
     public void displayTotal(View view) {
         RadioButton correctAnswerQuestion1 = findViewById(R.id.q1C);
         RadioButton correctAnswerQuestion2 = findViewById(R.id.q2D);
+        CheckBox question3IncorrectAnswer1 = findViewById(R.id. q3A);
         CheckBox question3CorrectAnswer1 = findViewById(R.id. q3B);
         CheckBox question3CorrectAnswer2 = findViewById(R.id. q3C);
         CheckBox question3CorrectAnswer3 = findViewById(R.id. q3D);
         EditText question4Response = findViewById(R.id.yesNoResponse);
-        String question4String = question4Response.getText().toString().toLowerCase();
+        String question4String = question4Response.getText().toString().toLowerCase().trim();
 
         if (correctAnswerQuestion1.isChecked()){
             correctScore +=1;
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             correctScore +=1;
         }
 
-        if (question3CorrectAnswer1.isChecked() && question3CorrectAnswer2.isChecked() && question3CorrectAnswer3.isChecked()) {
+        if (!question3IncorrectAnswer1.isChecked() && question3CorrectAnswer1.isChecked() && question3CorrectAnswer2.isChecked() && question3CorrectAnswer3.isChecked()) {
             correctScore +=1;
         }
 
@@ -52,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
             correctScore +=1;
         }
 
-        Toast.makeText(this, "Total Score is " + correctScore + " out of 4", Toast.LENGTH_SHORT).show();
+        if (correctScore==4){
+            Toast.makeText(this, "Perfect! Total Score is " + correctScore + " out of 4", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Retake the quiz: Total Score is " + correctScore + " out of 4", Toast.LENGTH_SHORT).show();
+        }
+
         correctScore = 0;
     }
 }
